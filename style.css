@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+* {margin: 0; padding: 0;}
+
+body {
+    background-color: #f1fbff;
+    font-family: 'Quicksand', sans-serif;
+}
+.carousel-caption {
+    /* apsolute 되어있는 상황 */
+    bottom: 220px;
+    z-index: 10;
+}
+.carousel-caption h5 {
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.carousel-caption p {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.carousel-inner {
+    position: relative;
+}
+.carousel-inner::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.w-100 {height: 100vh;}
+
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.card i {
+    font-size: 50px;
+    color: #fff;
+}
+.portfolio .card {
+    box-shadow: 18px 16px 40px rgba(0,0,0,0.15);
+}
+.team .card img {
+    width: 8rem;
+    align-self: center;
+}
+.team .card {
+    box-shadow: 18px 16px 40px rgba(0,0,0,0.15);
+}
+.team .card i {
+    color: #000;
+    font-size: 20px;
+}
+
+@media (max-width:991px) {
+    /* 991px 보다 작을 때 */
+    .carousel-caption {
+        bottom: 10vh;
+    }
+    .carousel-caption h5 {
+        font-style: 25px;
+    }
+}
